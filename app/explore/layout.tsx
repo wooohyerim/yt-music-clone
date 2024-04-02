@@ -1,6 +1,6 @@
 import React from "react";
 
-const layout = ({ children }) => {
+const layout = ({ children }: any) => {
   return <div>explore layout{children}</div>;
 };
 
