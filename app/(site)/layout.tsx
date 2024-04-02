@@ -1,12 +1,7 @@
 import React from "react";
 
-const layout = ({ children }) => {
-  return (
-    <div>
-      (site)/layout이 먼저 렌더 되고
-      {children}
-    </div>
-  );
+const layout = ({ children }: any) => {
+  return <div>{children}</div>;
 };
 
 export default layout;
