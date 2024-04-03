@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/providers/themeProvider";
+import SideBar from "@/components/SideBar";
 
 import "./globals.css";
 
@@ -25,7 +26,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <SideBar>{children}</SideBar>
         </ThemeProvider>
       </body>
     </html>
