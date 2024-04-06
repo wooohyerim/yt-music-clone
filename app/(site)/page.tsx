@@ -8,7 +8,13 @@ const page = async () => {
   // await sleep(2000); loading
 
   // throw new Error("error"); error
-  return <div>HomePage!!!!!</div>;
+  return (
+    <div className="min-h-[600px]">
+      <div className="h-[500px] bg-neutral-700">HomePage!!!!</div>
+      <div className="h-[500px] bg-neutral-700">HomePage!!!!</div>
+      <div className="h-[500px] bg-neutral-700">HomePage!!!!</div>
+    </div>
+  );
 };
 
 export default page;
