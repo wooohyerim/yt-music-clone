@@ -11,6 +11,7 @@ import Navigator from "@/components/elements/Navigator";
 import UserIcon from "@/components/UserIcon";
 import PagePadding from "@/components/PagePadding";
 import { cn } from "@/lib/utils";
+import useUIState from "@/hooks/useUIState";
 
 import {
   Drawer,
@@ -45,6 +46,7 @@ const HeaderDrawer = ({ children }) => {
 };
 
 const Header = ({ children }) => {
+  const { headerImageSrc } = useUIState();
   const [isScrolled, setIsScrolled] = useState(false);
   const headRef = useRef();
 
@@ -67,7 +69,10 @@ const Header = ({ children }) => {
           <Image
             fill
             className="object-cover"
-            src="https://images.unsplash.com/photo-1712060950750-63181fec4bf7"
+            src={
+              headerImageSrc ||
+              "https://images.unsplash.com/photo-1712060950750-63181fec4bf7"
+            }
             alt="bg"
             priority
           />
