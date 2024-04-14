@@ -27,10 +27,13 @@ const PlayListCard = ({ playlist }) => {
     <article className="h-[240px] cursor-pointer group">
       <section className="relative h-[136px]" onClick={onClickCard}>
         <Image
-          src={imgSrc}
+          src={
+            imgSrc ||
+            "https://images.unsplash.com/photo-1712060950750-63181fec4bf7"
+          }
           fill={true}
           alt="thumbnail"
-          className="object-cover"
+          className="object-cover rounded-md"
           sizes="full"
         />
         <div className="hidden relative group-hover:block bg-gradient-to-b from-[rgba(0,0,0,0.7)] top-0 w-full h-[136px]">
