@@ -11,9 +11,9 @@ const PlayListNav = ({ playlist }) => {
   };
 
   return (
-    <li className="flex flex-row justify-between items-center mx-3 px-4 h-[56px] rounded-lg hover:bg-neutral-700 group">
+    <li className="flex flex-row justify-between items-center mx-3 px-4 h-[56px] rounded-lg  hover:bg-neutral-700 group">
       <div>
-        <div className="text-[14px]">{playlistName}</div>
+        <div className="text-[14px] ">{playlistName}</div>
         <div className="text-[12px] text-neutral-500">{owner}</div>
       </div>
       <div
