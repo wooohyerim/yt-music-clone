@@ -8,9 +8,11 @@ import { getRandomElementFromArray } from "@/lib/utils";
 import { MdMoreVert } from "react-icons/md";
 import { FiPlay } from "react-icons/fi";
 import IconButton from "./elements/IconButton";
+import usePlayerState from "@/hooks/usePlayerState";
 
 const PlayListCard = ({ playlist }) => {
   const { id, owner, playlistName, songList } = playlist;
+  const { addSongList } = usePlayerState();
 
   const { push } = useRouter();
 
@@ -21,7 +23,10 @@ const PlayListCard = ({ playlist }) => {
     push(`/playlist?list=${id}`);
   };
 
-  const onClickPlay = () => {};
+  const onClickPlay = (e) => {
+    e.stopPropagation();
+    addSongList(songList);
+  };
 
   return (
     <article className="h-[240px] cursor-pointer group">
