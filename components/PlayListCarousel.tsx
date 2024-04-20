@@ -28,7 +28,7 @@ const PlayListCarousel: React.FC<PlayListCarouselProps> = ({
     <div className="w-full">
       <Carousel>
         <div className="flex flex-row justify-between items-end my-2">
-          <article className="flex flex-row gap-3 text-white">
+          <article className="flex flex-row gap-3 ">
             {Thumbnail}
             <div className="flex flex-col justify-center">
               <div>

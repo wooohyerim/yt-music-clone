@@ -27,7 +27,7 @@ const page = async (props: ChannelPageProps) => {
     <PagePadding>
       <HeaderBgChanger imageSrc={imageSrc} />
       <div className="mt-[150px]"></div>
-      <section className="text-white">
+      <section>
         <div className="text-[28px] font-bold">{channel.name}</div>
         <article className="mt-4 lg:hidden">
           <div>
@@ -50,7 +50,7 @@ const page = async (props: ChannelPageProps) => {
           />
         </div>
       </section>
-      <section className="text-white mt-[80px]">
+      <section className=" mt-[80px]">
         <div className="text-[28px] font-bold"> 노래 </div>
         <div className="mt-[28px]">
           <ul className="flex flex-col gap-2">
@@ -60,7 +60,7 @@ const page = async (props: ChannelPageProps) => {
           </ul>
         </div>
       </section>
-      <section className="text-white mt-[80px]">
+      <section className=" mt-[80px]">
         <div className="text-[28px] font-bold">앨범</div>
         <PlayListCarousel playListArray={channel.playlistArray} />
       </section>

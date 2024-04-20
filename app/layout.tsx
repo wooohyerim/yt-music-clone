@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/providers/themeProvider";
 import SideBar from "@/components/SideBar";
+import PlayerWrapper from "@/components/player/PlayerWrapper";
 
 import "./globals.css";
 
@@ -27,6 +28,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <SideBar>{children}</SideBar>
+          <PlayerWrapper />
         </ThemeProvider>
       </body>
     </html>

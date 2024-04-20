@@ -42,7 +42,7 @@ const Navigator = () => {
             <Link key={route.label} href={route.href}>
               <div
                 className={cn(
-                  "flex flex-row items-center gap-4 text-[16px] text-white hover:bg-neutral-700 rounded-lg p-2",
+                  "flex flex-row items-center gap-4 text-[16px] hover:bg-neutral-700 rounded-lg p-2",
                   route.isActive && "bg-neutral-800"
                 )}
               >
@@ -57,13 +57,13 @@ const Navigator = () => {
         <div className="w-full h-[1px] bg-neutral-700"></div>
       </section>
       <section className="px-6">
-        <div className="flex flex-row justify-center gap-2 items-center bg-neutral-800 my-6 p-2 rounded-3xl text-white  font-[200] hover:bg-neutral-700 cursor-pointer">
+        <div className="flex flex-row justify-center gap-2 items-center bg-neutral-800 my-6 p-2 rounded-3xl  font-[200] hover:bg-neutral-700 cursor-pointer">
           <FiPlus size={24} />
           <span>새 재생목록</span>
         </div>
       </section>
       <section>
-        <ul className="flex flex-col text-white ">
+        <ul className="flex flex-col ">
           {dummyPlaylistArray.map((playlist) => {
             return <PlayListNav key={playlist.id} playlist={playlist} />;
           })}
